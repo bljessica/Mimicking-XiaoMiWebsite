@@ -1,0 +1,84 @@
+* {margin: 0; padding: 0; }
+body {font-family: 'Helvetica Neue',Helvetica,Arial,'Microsoft Yahei','Hiragino Sans GB','Heiti SC','WenQuanYi Micro Hei',sans-serif;}
+h2, h3{font-size : 16px; font-weight: normal; }
+a {text-decoration: none; color: inherit}
+ul {list-style: none; }
+img {display: block; }
+input {outline: none; background: none; border: none; }
+
+.iwidth {width: 1225px; margin: 0 auto;}
+.aside {width: 235px;}
+.clear:after {content: ''; display: block; clear: both; }
+
+#header {height: 40px; background: #333333; font-size: 12px; color: white; }
+#header .product-items {margin-left: 12px; }
+#header .product-items li {width: auto; display: inline-block; padding: 0 5px; 
+    line-height: 40px; color: #B0B0B0; }
+#header .product-items li::after, #header .user-action li::after {content: '|'; 
+    position: relative; left: 6px; 
+    color: #424242; }
+#header .product-items li:last-child::after,  #header .user-action li:last-child::after {
+    content: ''}
+#header .user-action { width: auto; height: 40px; display: inline-block; 
+    position: relative;  top: -40px; left: 76%; }
+#header .user-action li { width: auto; display: inline-block; line-height: 40px; 
+    color: #B0B0B0; padding: 0 5px; }
+#header .shopping-cart {width: 120px; height: 40px; background: #424242; float:right; 
+        position: relative; top: -40px; right: 35px; line-height: 40px; color: #B0B0B0; 
+        text-align: center; }
+#header .shopping-cart i {font-size: 14px; }
+
+ #nav {height:100px; border: 1px solid white; position: relative;  }
+#nav .mi-logo { width: 56px; height: 56px; position: absolute; left: 0; top: 22px; 
+    background: #FF6700 ;}
+#nav .mi-logo img {width: 100%; height: 100%;}
+#nav .navbar {height: 100px; line-height: 100px; position: absolute; left: 240px; }
+#nav .navbar li {width: auto; display: inline-block; padding: 0 7px; }
+#nav .search-box {border: 1px solid #E0E0E0;; width: 296px; height: 50px; text-align: center; 
+    position: absolute; top: 25px;  right: 0; }
+#nav .search-box input {width: 245px; height: 50px; border-right: 1px solid #E0E0E0; text-indent: 10px; ;}
+#nav .search-box i {display: block; width: 50px; height: 50px; font-size: 22px; float: right; 
+    line-height: 50px; color: #686561; position:relative; top: 3px; }
+
+
+#main .slider-wrapper {height: 460px; position: relative;}
+#main .slider-wrapper .slider {width: 100%; height: 100%; position: relative;
+    /* background: url('../imgs/slider_1.webp') no-repeat; background-size: 100% 100%; */
+}
+#main .slider-wrapper .slider li {opacity: 0;}
+#main .slider-wrapper .slider li:first-of-type {opacity: 1;}
+#main .slider-wrapper .slider .active {opacity: 1; transition: .5s}
+#main .slider-wrapper .slider .prev {opacity: 0; transition: .5s}
+#main .slider-wrapper .slider li a img{
+    width: 100%; height: 100%; position: absolute; left: 0; top: 0; 
+}
+#main .slider-wrapper .slider-nav { width: 175px; height: 400px; background: rgba(0, 0, 0, 0.3); 
+    position: absolute; left: 0; top: 0; padding: 30px;}
+#main .slider-wrapper .slider-nav li {width: 100%; height: 40px; line-height: 40px; float: left; color: white; 
+    font-size: 14px; }
+#main .slider-wrapper .slider-nav li i {float: right; }
+#main .slider-wrapper .to-left {position: absolute; left: 240px; top: 230px; margin-top: -20px; cursor: pointer;}
+#main .slider-wrapper .to-left i, #main .slider-wrapper .to-right i {font-size: 40px; color: #E0E0E0; position: relative; top: 5px;}
+#main .slider-wrapper .to-right {position: absolute; right: 5px; top: 230px; margin-top: -20px; cursor: pointer;}
+#main .slider-wrapper .to-left:hover, #main .slider-wrapper .to-right:hover {
+    background: rgba(0, 0, 0, .5);
+}
+#main .slider-wrapper .slider-dots {position: absolute; bottom: 20px; right: 20px; }
+#main .slider-wrapper .slider-dots li {float: left; margin: 5px;  width: 6px; height: 6px; 
+    border-radius: 50%; background: #746A95; border: 2px solid #9E97B5; }
+#main .slider-wrapper .slider-dots li:first-child {background: transparent;}
+
+
+#main .newest {height: 170px; margin-top: 20px;  }
+#main .newest .services {padding: 2px; background: #5F5750; height: 100%; 
+    box-sizing: border-box; color: #C8C5C3; font-size: 12px; float: left; }
+#main .newest .services li {width: 75px; height: 80px; border-left: 1px solid #665E57; 
+border-top: 1px solid #665E57; float: left; text-align: center; }
+#main .newest .services li i {font-size: 30px;  display: block; position: relative;
+    top: 13px; }
+#main .newest .services li span {display: block; position: relative; top: 13px; }
+
+#main .newest .newest-products { height: 100%; float: left; }
+#main .newest .newest-products li {width: 315px; height: 170px; margin-left:15px; 
+    float: left; }
+#main .newest .newest-products li img {width: 100% ; height: 100%; }

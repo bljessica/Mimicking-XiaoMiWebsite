@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小米商城</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/iconfont/iconfont.css">
+    <style>   
+        #main .classify-wrapper {width: 100%; height: 5000px; background: #F5F5F5; 
+            margin-top: 30px;  position: relative; }
+        #main .classify-wrapper .shangou .title-bar {width: 100%; height: 60px; }
+        #main .classify-wrapper .shangou .title-bar h2 {font-size: 24px; line-height: 60px; font-weight: 200; }
+        #main .classify-wrapper .shangou .title-bar span {width: 35px; height: 22px; 
+            border: 1px solid #E0E0E0; position: absolute; top: 20px; right: 0; text-align: center;
+            line-height: 22px; cursor: pointer;}
+        #main .classify-wrapper .shangou .title-bar span:first-of-type {
+            border-right: none; right: 37px; }
+        #main .classify-wrapper .shangou .title-bar span i {font-size: 18px; color: #B0B0B0; 
+            position: relative; top: 2px; }
+
+        #main .classify-wrapper .shangou .countdown {height: 345px; float: left; background: #F1EDED; 
+            text-align: center; border-top: 1px solid red; position: relative; }
+        #main .classify-wrapper .shangou .countdown .countdown-time {
+            color: red; font-size: 22px; display: block; width: 100px; top: 50px; position: absolute; left: calc(50% - 50px); 
+        }
+        #main .classify-wrapper .shangou .countdown img {
+            position: absolute; top: 110px; left: calc(50% - 26px); 
+        }
+        #main .classify-wrapper .shangou .countdown>span:nth-of-type(2) {
+            color: #6F6D6D; position: absolute; bottom: 130px; display: block; width: 100px; left: calc(50% - 50px); 
+        }
+        #main .classify-wrapper .shangou .countdown .countdown-time-left {
+            width: 160px;  height: 45px; position: absolute;  bottom: 50px; left: calc(50% - 80px); font-size: 25px; line-height: 45px; 
+        }
+        #main .classify-wrapper .shangou .countdown .countdown-time-left span {
+            width: 45px; height: 45px; background: #605751; float: left; margin-left: 10px; color: white;  
+        }
+        #main .classify-wrapper .shangou .countdown .countdown-time-left span:after {content: ':' ; display: block; 
+        color: #605751; position: relative; left: 27px; top: -46px;  }
+        #main .classify-wrapper .shangou .countdown .countdown-time-left span:last-of-type:after {content: '';}
+        #main .classify-wrapper .shangou .countdown .countdown-time-left span:first-of-type {
+            margin-left: 0; 
+        }
+
+        #main .classify-wrapper .shangou .products-box {
+            height: 346px; width: 988px;position: relative;  overflow: hidden;
+            /*height: 346px; width: 4693px;position: relative; left: 235px;*/ 
+        }
+        /*4+18+2+4个*/
+        #main .classify-wrapper .shangou .products-box .products{
+            height: 100%; width: 6916px; position: absolute; left: -988px; 
+        }
+        #main .classify-wrapper .shangou .products-box .products li{ height: 345px; float: left; width: 235px; 
+            margin-left: 12px; background: white; text-align: center; border-top: 1px solid greenyellow;
+            position: relative;}
+        #main .classify-wrapper .shangou .products-box .products .shangou_none {
+            background: #F5F5F5; border: none;
+        }
+        #main .classify-wrapper .shangou .products-box .products li a img {
+            width: 160px; height: 160px; position: absolute; top: 50px; left: 37px; 
+        }
+        #main .classify-wrapper .shangou .products-box .products li .product-title {
+            position: absolute; display: block; bottom: 90px;  left: 20px; width: 196px; 
+            height: 20px; line-height: 20px; font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+            -o-text-overflow: ellipsis;
+        }
+        #main .classify-wrapper .shangou .products-box .products li .product-desc {
+            position: absolute; display: block; bottom: 70px; left: 43px; width: 150px; height: 20px; 
+            line-height: 20px; font-size: 12px; color: #B2B2B2; 
+        }
+        #main .classify-wrapper .shangou .products-box .products li .price {
+            position: absolute; display: block; bottom: 40px; left: 65px; width: 55px; height: 20px; 
+            line-height: 20px; font-size: 14px; color: #FA6509; 
+        }
+        #main .classify-wrapper .shangou .products-box .products li .del-price {
+            position: absolute; display: block; bottom: 40px; right: 65px; width: 55px; height: 20px; 
+            line-height: 20px; font-size: 14px; text-decoration: line-through; color: #B2B2B2;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <ul class="product-items">
+            <li><a href="">小米商城</a></li>
+            <li><a href="">MIUI</a></li>
+            <li><a href="">IoT</a></li>
+            <li><a href="">云服务</a></li>
+            <li><a href="">金融</a></li>
+            <li><a href="">有品</a></li>
+            <li><a href="">小爱开放平台</a></li>
+            <li><a href="">企业团购</a></li>
+            <li><a href="">资质证照</a></li>
+            <li><a href="">协议规则</a></li>
+            <li><a href="">下载app</a></li>
+            <li><a href="">Select Location</a></li>
+        </ul>
+        <ul class="user-action">
+            <li><a href="">登录</a></li>
+            <li><a href="">注册</a></li>
+            <li><a href="">消息通知</a></li>
+        </ul>
+        <div class="shopping-cart"><a href="">
+            <i class="iconfont icongouwuchekong"></i>
+            购物车
+            <span>（0）</span></a>
+        </div>
+    </header>
+    <nav id="nav" class="iwidth">
+        <div class="mi-logo"><a href=""><img src="./imgs/mi-logo.png" alt=""></a></div>
+        <ul class="navbar">
+            <li><a href="">小米手机</a></li>
+            <li><a href="">Redmi红米</a></li>
+            <li><a href="">电视</a></li>
+            <li><a href="">笔记本</a></li>
+            <li><a href="">家电</a></li>
+            <li><a href="">路由器</a></li>
+            <li><a href="">智能硬件</a></li>
+            <li><a href="">服务</a></li>
+            <li><a href="">社区</a></li>
+        </ul>
+        <div class="search-box">
+            <input type="text" placeholder="手机">
+            <i class="iconfont iconsousuo"></i>
+        </div>
+    </nav>
+    <main id="main"">
+        <div class="slider-wrapper iwidth">
+            <ul class="slider">
+                <li class="slider_1 active">
+                    <a href="" target="_blank">
+                        <img src="./imgs/slider_1.jpg" alt="">
+                    </a>
+                </li>
+                <li class="slider_2">
+                    <a href="" target="_blank">
+                        <img src="./imgs/slider_2.jpg" alt="">
+                    </a>
+                </li>
+                <li class="slider_3">
+                    <a href="" target="_blank">
+                        <img src="./imgs/slider_3.jpg" alt="">
+                    </a>
+                </li>
+                <li class="slider_4">
+                    <a href="" target="_blank">
+                        <img src="./imgs/slider_5.jpg" alt="">
+                    </a>
+                </li>
+                <li class="slider_5 prev">
+                    <a href="" target="_blank">
+                        <img src="./imgs/slider_5.jpg" alt="">
+                    </a>
+                </li>
+            </ul>
+            <ul class="slider-nav">
+                <li>手机 电话卡<i class="iconfont iconyoujiantou"></i></li>
+                <li>电视 盒子<i class="iconfont iconyoujiantou"></i></li>
+                <li>笔记本 显示器<i class="iconfont iconyoujiantou"></i></li>
+                <li>家电 插线板<i class="iconfont iconyoujiantou"></i></li>
+                <li>出行 穿戴<i class="iconfont iconyoujiantou"></i></li>
+                <li>智能 路由器<i class="iconfont iconyoujiantou"></i></li>
+                <li>电源 配件<i class="iconfont iconyoujiantou"></i></li>
+                <li>健康 儿童<i class="iconfont iconyoujiantou"></i></li>
+                <li>耳机 音箱<i class="iconfont iconyoujiantou"></i></li>
+                <li>生活 箱包<i class="iconfont iconyoujiantou"></i></li>
+            </ul>
+            <div class="to-left"><i class="iconfont iconzuojiantou"></i></div>
+            <div class="to-right"><i class="iconfont iconyoujiantou"></i></div>
+            <ul class="slider-dots">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <section class="newest clear iwidth">
+            <ul class="services aside">
+                <li><a href=""><i class="iconfont iconshijian"></i><span>小米秒杀</span></a></li>
+                <li><a href=""><i class="iconfont iconqiye"></i><span>企业团购</span></a></li>
+                <li><a href=""><i class="iconfont iconF_round"></i><span>F码通道</span></a></li>
+                <li><a href=""><i class="iconfont iconSIMka"></i><span>米粉卡</span></a></li>
+                <li><a href=""><i class="iconfont iconqian"></i><span>以旧换新</span></a></li>
+                <li><a href=""><i class="iconfont iconchongzhi"></i><span>话费充值</span></a></li>
+            </ul>
+            <ul class="newest-products">
+                <li>
+                    <a href="">
+                        <img src="./imgs/new_pro1.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="./imgs/new_pro2.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="./imgs/new_pro3.jpg" alt="">
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <div class="classify-wrapper">
+            <section class="shangou iwidth">
+                <div class="title-bar">
+                    <h2>小米闪购</h2>
+                    <span>
+                        <i class="iconfont iconzuojiantou"></i>
+                    </span>
+                    <span>
+                        <i class="iconfont iconyoujiantou"></i>
+                    </span>
+                </div>
+                <div class="countdown aside">
+                    <span class="countdown-time">22:00场</span>
+                    <img src="./imgs/shangou.jpg" alt="闪购">
+                    <span>本场已结束</span>
+                    <div class="countdown-time-left">
+                        <span>00</span>
+                        <span>00</span>
+                        <span>00</span>
+                    </div>
+                </div>
+                <div class="products-box">
+                    <ul class="products">
+                        <!-- 保持轮播方向一致 -->
+                        <li class="shangou_16">
+                            <a href="" target="_blank"><img src="./imgs/shangou_16.jpg" alt=""></a>
+                            <h3 class="product-title">米家天然乳胶护颈枕 混灰色</h3>
+                            <p class="product-desc">天然乳胶 三曲线护颈</p>
+                            <span class="price">179元</span><span class="del-price">199元</span>
+                        </li>
+                        <li class="shangou_17">
+                            <a href="" target="_blank"><img src="./imgs/shangou_17.jpg" alt=""></a>
+                            <h3 class="product-title">自清洁 | 米家互联网立式空调 2匹</h3>
+                            <p class="product-desc">一级能效更省电，自清洁</p>
+                            <span class="price">3499元</span><span class="del-price">4299元</span>
+                        </li>
+                        <li class="shangou_18">
+                            <a href="" target="_blank"><img src="./imgs/shangou_18.jpg" alt=""></a>
+                            <h3 class="product-title">小米笔记本Air 12.5" 2019款 8代M3 4G 256G 金色</h3>
+                            <p class="product-desc">像杂志一样随身携带</p>
+                            <span class="price">3699元</span><span class="del-price">3999元</span>
+                        </li>
+                        <li class="shangou_none"></li>
+                        <li class="shangou_1">
+                            <a href="" target="_blank"><img src="./imgs/shangou_1.jpg" alt=""></a>
+                            <h3 class="product-title">日常元素抽纸 青春版 24包/箱</h3>
+                            <p class="product-desc">精选原生竹浆，健康环保</p>
+                            <span class="price">27.9元</span><span class="del-price">32.9元</span>
+                        </li>
+                        <li class="shangou_2">
+                            <a href="" target="_blank"><img src="./imgs/shangou_2.jpg" alt=""></a>
+                            <h3 class="product-title">小米手环4 石墨黑</h3>
+                            <p class="product-desc">大屏彩显，20天超长续航</p>
+                            <span class="price">149元</span><span class="del-price">169元</span>
+                        </li>
+                        <li class="shangou_3">
+                            <a href="" target="_blank"><img src="./imgs/shangou_3.jpg" alt=""></a>
+                            <h3 class="product-title">巨省电 | 小米新1级空调X 1.5匹</h3>
+                            <p class="product-desc">变频节能巨省电，自清洁</p>
+                            <span class="price">2099元</span><span class="del-price">2399元</span>
+                        </li>
+                        <li class="shangou_4">
+                            <a href="" target="_blank"><img src="./imgs/shangou_4.jpg" alt=""></a>
+                            <h3 class="product-title">RedmiBook 13 锐龙版 R5 16G 512G SSD 集显 月光银</h3>
+                            <p class="product-desc">全面屏高性能轻薄本</p>
+                            <span class="price">3799元</span><span class="del-price">3999元</span>
+                        </li>
+                        <li class="shangou_5">
+                            <a href="" target="_blank"><img src="./imgs/shangou_5.jpg" alt=""></a>
+                            <h3 class="product-title">自动折叠伞 黑</h3>
+                            <p class="product-desc">防泼水伞布，轻盈拒水</p>
+                            <span class="price">89元</span><span class="del-price">99元</span>
+                        </li>
+                        <li class="shangou_6">
+                            <a href="" target="_blank"><img src="./imgs/shangou_6.jpg" alt=""></a>
+                            <h3 class="product-title">Redmi全自动波轮洗衣机1S 8kg 灰色</h3>
+                            <p class="product-desc">小身材大容量，可预约</p>
+                            <span class="price">799元</span><span class="del-price">899元</span>
+                        </li>
+                        <li class="shangou_7">
+                            <a href="" target="_blank"><img src="./imgs/shangou_7.jpg" alt=""></a>
+                            <h3 class="product-title">RedmiBook 16 R5 8G 512G 灰色 灰色</h3>
+                            <p class="product-desc">超震撼全面屏，超轻薄性能本</p>
+                            <span class="price">3599元</span><span class="del-price">3799元</span>
+                        </li><li class="shangou_8">
+                            <a href="" target="_blank"><img src="./imgs/shangou_8.jpg" alt=""></a>
+                            <h3 class="product-title">米家三门冰箱215L 银色</h3>
+                            <p class="product-desc">三温区高效保鲜</p>
+                            <span class="price">1199元</span><span class="del-price">1499元</span>
+                        </li>
+                        <li class="shangou_9">
+                            <a href="" target="_blank"><img src="./imgs/shangou_9.jpg" alt=""></a>
+                            <h3 class="product-title">脊安适 颈部按摩器 护颈仪G2 白色G2</h3>
+                            <p class="product-desc">TENS按摩 双效热敷</p>
+                            <span class="price">279元</span><span class="del-price">399元</span>
+                        </li>
+                        <li class="shangou_10">
+                            <a href="" target="_blank"><img src="./imgs/shangou_10.jpg" alt=""></a>
+                            <h3 class="product-title">RedmiBook 14 锐龙版 R5 8G 512G PCIe 45%NTSC 银</h3>
+                            <p class="product-desc">满血锐龙，高性能金属轻薄本</p>
+                            <span class="price">3299元</span><span class="del-price">3699元</span>
+                        </li>
+                        <li class="shangou_11">
+                            <a href="" target="_blank"><img src="./imgs/shangou_11.jpg" alt=""></a>
+                            <h3 class="product-title">最生活毛巾·Air（10条装） 白色+素蓝</h3>
+                            <p class="product-desc">给生活一条好毛巾</p>
+                            <span class="price">99元</span><span class="del-price">169元</span>
+                        </li>
+                        <li class="shangou_12">
+                            <a href="" target="_blank"><img src="./imgs/shangou_12.jpg" alt=""></a>
+                            <h3 class="product-title">定频 | 米家互联网立式空调 2匹</h3>
+                            <p class="product-desc">高效制冷热，出众静音</p>
+                            <span class="price">2899元</span><span class="del-price">3499元</span>
+                        </li>
+                        <li class="shangou_13">
+                            <a href="" target="_blank"><img src="./imgs/shangou_13.jpg" alt=""></a>
+                            <h3 class="product-title">巨省电 | 小米新1级立式空调 3匹</h3>
+                            <p class="product-desc">新一级能效巨省电，自清洁</p>
+                            <span class="price">4999元</span><span class="del-price">5999元</span>
+                        </li>
+                        <li class="shangou_14">
+                            <a href="" target="_blank"><img src="./imgs/shangou_14.jpg" alt=""></a>
+                            <h3 class="product-title">Fun Home保温泡茶杯（茶水分离） 白色 520ml</h3>
+                            <p class="product-desc">茶水分离，长效保温</p>
+                            <span class="price">69元</span><span class="del-price">99元</span>
+                        </li>
+                        <li class="shangou_15">
+                            <a href="" target="_blank"><img src="./imgs/shangou_15.jpg" alt=""></a>
+                            <h3 class="product-title">RedmiBook 14 增强版 i7/8G/512G 银色</h3>
+                            <p class="product-desc">十代酷睿更强劲</p>
+                            <span class="price">4699元</span><span class="del-price">4999元</span>
+                        </li>
+                        <li class="shangou_16">
+                            <a href="" target="_blank"><img src="./imgs/shangou_16.jpg" alt=""></a>
+                            <h3 class="product-title">米家天然乳胶护颈枕 混灰色</h3>
+                            <p class="product-desc">天然乳胶 三曲线护颈</p>
+                            <span class="price">179元</span><span class="del-price">199元</span>
+                        </li>
+                        <li class="shangou_17">
+                            <a href="" target="_blank"><img src="./imgs/shangou_17.jpg" alt=""></a>
+                            <h3 class="product-title">自清洁 | 米家互联网立式空调 2匹</h3>
+                            <p class="product-desc">一级能效更省电，自清洁</p>
+                            <span class="price">3499元</span><span class="del-price">4299元</span>
+                        </li>
+                        <li class="shangou_18">
+                            <a href="" target="_blank"><img src="./imgs/shangou_18.jpg" alt=""></a>
+                            <h3 class="product-title">小米笔记本Air 12.5" 2019款 8代M3 4G 256G 金色</h3>
+                            <p class="product-desc">像杂志一样随身携带</p>
+                            <span class="price">3699元</span><span class="del-price">3999元</span>
+                        </li>
+                        <!-- 保持轮播方向一致 -->
+                        <li class="shangou_none"></li>
+                        <li class="shangou_none"></li>
+                        <li class="shangou_1">
+                            <a href="" target="_blank"><img src="./imgs/shangou_1.jpg" alt=""></a>
+                            <h3 class="product-title">日常元素抽纸 青春版 24包/箱</h3>
+                            <p class="product-desc">精选原生竹浆，健康环保</p>
+                            <span class="price">27.9元</span><span class="del-price">32.9元</span>
+                        </li>
+                        <li class="shangou_2">
+                            <a href="" target="_blank"><img src="./imgs/shangou_2.jpg" alt=""></a>
+                            <h3 class="product-title">小米手环4 石墨黑</h3>
+                            <p class="product-desc">大屏彩显，20天超长续航</p>
+                            <span class="price">149元</span><span class="del-price">169元</span>
+                        </li>
+                        <li class="shangou_3">
+                            <a href="" target="_blank"><img src="./imgs/shangou_3.jpg" alt=""></a>
+                            <h3 class="product-title">巨省电 | 小米新1级空调X 1.5匹</h3>
+                            <p class="product-desc">变频节能巨省电，自清洁</p>
+                            <span class="price">2099元</span><span class="del-price">2399元</span>
+                        </li>
+                        <li class="shangou_4">
+                            <a href="" target="_blank"><img src="./imgs/shangou_4.jpg" alt=""></a>
+                            <h3 class="product-title">RedmiBook 13 锐龙版 R5 16G 512G SSD 集显 月光银</h3>
+                            <p class="product-desc">全面屏高性能轻薄本</p>
+                            <span class="price">3799元</span><span class="del-price">3999元</span>
+                        </li>
+                    </ul>
+                </div>
+                
+            </section>
+        </div>
+    </main>
+    <!-- <script src="./js/jquery-3.4.1.js"></script> -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/require.js/2.3.6/require.js" data-main="./js/index.js"></script>
+    <!-- <script src="./js/index.js"></script> -->
+</body>
+</html>
