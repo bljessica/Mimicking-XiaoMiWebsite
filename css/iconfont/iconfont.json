@@ -6,6 +6,27 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "6528214",
+      "name": "消息",
+      "font_class": "xiaoxi",
+      "unicode": "e67b",
+      "unicode_decimal": 59003
+    },
+    {
+      "icon_id": "1447738",
+      "name": "播放",
+      "font_class": "bofang",
+      "unicode": "e61a",
+      "unicode_decimal": 58906
+    },
+    {
+      "icon_id": "778500",
+      "name": "右箭头",
+      "font_class": "youjiantou1",
+      "unicode": "e619",
+      "unicode_decimal": 58905
+    },
+    {
       "icon_id": "338376",
       "name": "充值",
       "font_class": "chongzhi",
@@ -158,13 +179,6 @@
       "font_class": "liwu",
       "unicode": "e67c",
       "unicode_decimal": 59004
-    },
-    {
-      "icon_id": "14055588",
-      "name": "消息",
-      "font_class": "xiaoxi1",
-      "unicode": "e61d",
-      "unicode_decimal": 58909
     }
   ]
 }

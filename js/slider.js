@@ -1,34 +1,49 @@
 define(function() {
-    var index = 0;//第几页
-    var timer = null;
-    var $box = $('#main .slider-wrapper');
-    var $lis = $('#main .slider-wrapper .slider li')
+    let index = 1;//第几页
+    let timer = null;
+    let $box = $('#main .slider-wrapper');
+    let $lis = $('#main .slider-wrapper .slider li')
+    let $dots = $('#main .slider-wrapper .slider-dots li');
 
     function shiftLeft() {
+        //图片
         $('#main .slider-wrapper .slider .prev').removeClass('prev');
-        $li = $('#main .slider-wrapper .slider .active');
+        let $li = $('#main .slider-wrapper .slider .active');
         $li.removeClass('active');
         $li.addClass('prev');
+        //小圆点
+        $('#main .slider-wrapper .slider-dots .prev').removeClass('prev');
+        let $dot = $('#main .slider-wrapper .slider-dots .active');
+        $dot.removeClass('active');
+        $dot.addClass('prev');
+        
         index++;
-        if(index == 5){
-            index = 0;
+        if(index === 6){
+            index = 1;
         }
         $lis.eq(index).addClass('active');
-        console.log(index)
+        $dots.eq(index - 1).addClass('active');
 
     }
 
     function shiftRight() {
+        //图片
         $('#main .slider-wrapper .slider .prev').removeClass('prev');
-        $li = $('#main .slider-wrapper .slider .active');
+        let $li = $('#main .slider-wrapper .slider .active');
         $li.removeClass('active');
         $li.addClass('prev');
+        //小圆点
+        $('#main .slider-wrapper .slider-dots .prev').removeClass('prev');
+        let $dot = $('#main .slider-wrapper .slider-dots .active');
+        $dot.removeClass('active');
+        $dot.addClass('prev');
+
         index--;
-        if(index == -1){
-            index = 4;
+        if(index === 0){
+            index = 5;
         }
         $lis.eq(index).addClass('active');
-        console.log(index)
+        $dots.eq(index - 1).addClass('active');
     }
 
     function autoShift(){
@@ -36,7 +51,7 @@ define(function() {
         $(document).ready(function() {
             timer = setInterval(function(){
                 shiftLeft();
-            }, 2000);
+            }, 3000);
         })
 
         //鼠标移入停止轮播
@@ -49,7 +64,7 @@ define(function() {
             clearInterval(timer);
             timer = setInterval(function(){
                shiftLeft();
-            }, 2000);
+            }, 3000);
         })
 
         //左箭头
@@ -65,8 +80,23 @@ define(function() {
         });
     }
 
+    function navShow(){
+        let $btns = $('#main .slider-wrapper .slider-nav>li');
+        let $descs = $('#main .slider-wrapper .slider-nav .desc-container');
+
+        for(let i = 0; i < $btns.length; i++){
+            $btns.eq(i).mouseover(function(){
+                $descs.eq(i).show();
+            })
+            $btns.eq(i).mouseout(function(){
+                $descs.eq(i).hide();
+            })
+        }
+    }
+
     return {
-        autoShift: autoShift
+        autoShift: autoShift,
+        navShow: navShow
     };
 })
     
