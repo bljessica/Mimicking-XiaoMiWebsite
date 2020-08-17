@@ -1,0 +1,24 @@
+body {background: #F9F9F9;}
+
+
+#footer {height: 90px; width: 100%; font-size: 14px; color: #919191; text-align: center; position: relative;}
+#footer .common-problems {position: absolute; height: 20px; line-height: 20px; bottom: 60px; width: 334px; left: calc(50% - 167px); }
+#footer .common-problems a {padding: 0 10px; border-right: 1px solid #E0E0E0; display: inline-block; width: auto;}
+#footer .common-problems a:last-of-type {border-right: none; }
+#footer .common-problems .active {color: black; }
+#footer .common-problems a:hover {color: black; }
+#footer .copy-right {position: absolute; height: 20px; line-height: 20px; bottom: 28px; margin: 0 auto; width: 100%;  }
+
+#main {width: 860px; height: 545px; background: white; margin: 0 auto; text-align: center;}
+#main .logo {width: 48px; height: 48px; margin: 0 auto; margin-bottom: 45px;}
+#main .logo a {width: 100%; height: 100%; background: url('https://account.xiaomi.com/static/res/349d9c1/account-static/respassport/acc-2014/img/milogo.png');
+    display: block;}
+#main .title {font-size: 30px; }
+#main .register-form {margin-top: 35px; width: 330px; height: 250px; margin: 35px auto 0;}
+#main .register-form h3 {font-size: 14px; line-height: 30px; text-align: left;}
+#main .register-form input {width: 330px; height: 43px; box-sizing: border-box; border: 1px solid #E8E8E8;
+    font-size: 14px; padding: 5px; }
+#main .register-form input:first-of-type {margin-bottom: 30px;}
+#main .register-form .submit {border: none; background: #FF6700; color: white; margin-top: 30px; cursor: pointer;}
+#main .agree {margin-top: 80px; display: block; font-size: 14px; color: #9D9D9D; }
+#main .agree span {color: black; font-weight: bold;}

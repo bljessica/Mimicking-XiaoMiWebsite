@@ -1,14 +1,4 @@
-* {margin: 0; padding: 0; }
-body {font-family: 'Helvetica Neue',Helvetica,Arial,'Microsoft Yahei','Hiragino Sans GB','Heiti SC','WenQuanYi Micro Hei',sans-serif;}
-h2, h3{font-size : 16px; font-weight: normal; }
-a {text-decoration: none; color: inherit; }
-ul {list-style: none; }
-img {display: block; }
-input {outline: none; background: none; border: none; }
 
-.iwidth {width: 1225px; margin: 0 auto;}
-.aside {width: 235px;}
-.clear::after {content: ''; display: block; clear: both; }
 
 /* 分类为两行时ul通用样式 */
 #main .classify-wrapper .classify-item .products {height: 612px; width: 988px; position: absolute; top: 60px; left: 235px;}
@@ -312,3 +302,34 @@ color: #605751; position: relative; left: 27px; top: -46px;  }
 #footer .services ul li:last-of-type {border-right: none;}
 #footer .services ul li:hover {color: #FA6509; }
 #footer .services ul li i {font-size: 28px; position: relative; top: 4px; }
+
+#footer .other-info {position: relative;}
+#footer .other-info .other-services {width: 100%; height: 220px; position: relative;}
+#footer .other-info .other-services ul {width: 995px; height: 220px; }
+#footer .other-info .other-services ul::after {width: 1px; height: 130px; background: #E0E0E0; display: block;
+    content: ''; position: absolute; right: 261px; top: 30px; }
+#footer .other-info .other-services ul li {font-size: 12px; width: 148px; height: 90px; float: left; padding-left: 17px; 
+    padding-top: 20px; }
+#footer .other-info .other-services ul h3 {line-height: 35px; font-size: 14px; }
+#footer .other-info .other-services ul span {line-height: 28px; color: #757575; }
+#footer .other-info .other-services ul span:hover {color: #FA6509; }
+
+#footer .other-info .contact {text-align: center; width: 260px; height: 195px; font-size: 12px;
+    position: absolute; top: 0; right: 0; padding-top: 25px; }
+#footer .other-info .contact .phone-number {font-size: 22px; color: #FA6509; }
+#footer .other-info .contact .time {line-height: 20px; }
+#footer .other-info .contact span:nth-of-type(3) {display: block; width: 100px; height: 30px; 
+    border: 1px solid #FA6509; color: #FA6509; position: absolute; left: 50%; margin-left: -50px; 
+    top: 80px; line-height: 30px; }
+#footer .other-info .contact span:nth-of-type(3) a {width: 100%; height: 100%; display: block;}
+#footer .other-info .contact span:nth-of-type(3):hover {color: white; background: #FA6509; transition: .5s; }
+#footer .other-info .contact span:nth-of-type(3) i {position: relative; top: 2px; }
+#footer .other-info .contact span:nth-of-type(4) {position: relative; top: 45px;}
+#footer .other-info .contact span:nth-of-type(4) i {font-size: 24px; margin-left: 2px; position: relative; top: 2px; }
+#footer .other-info .contact span:nth-of-type(4) i:hover {color: #FA6509; }
+
+#footer .licence {height: 30px; width: 100%; }
+#footer .licence .sites {height: 30px; width: 100%; font-size: 14px; line-height: 30px; color: #757575; text-align: center; }
+#footer .licence .sites a::after {content: '|'; color: black; padding: 0 5px; }
+#footer .licence .sites a:last-of-type::after {content: ''; }
+#footer .licence .sites a:hover {color: #FA6509;}

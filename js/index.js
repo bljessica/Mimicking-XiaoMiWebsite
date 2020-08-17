@@ -2,13 +2,13 @@ require.config({
     baseUrl: 'js/', 
     paths: {
         'jquery': 'jquery-3.4.1',
-        'shangouShift': 'shangouShift',
-        'slider': 'slider',
-        'classifyShift': 'classifyShift',
-        'playBtnHover': 'playBtnHover',
-        'toUp': 'toUp',
-        'shoppingCart': 'shoppingCart',
-        'nav': 'nav'
+        'shangouShift': 'index/shangouShift',
+        'slider': 'index/slider',
+        'classifyShift': 'index/classifyShift',
+        'playBtnHover': 'index/playBtnHover',
+        'toUp': 'index/toUp',
+        'shoppingCart': 'index/shoppingCart',
+        'nav': 'index/nav',
     }
 });
 
