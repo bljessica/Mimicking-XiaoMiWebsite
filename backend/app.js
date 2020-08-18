@@ -148,7 +148,6 @@ app.post('/login', (req, res) => {
                 code = 0
                 msg = '登陆成功'
                 req.session.account = obj.account
-                req.session.save()
             }
             else {
                 code = 1
