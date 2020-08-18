@@ -15,7 +15,6 @@ define(function(){
     function navDescShow(){
         for(let i = 0; i < $descs.length; i++){
             $btns.eq(i).mouseenter(function(){
-                console.log(hasActive())
                 if(!hasActive()){
                     $descs.eq(i).stop(true, true);
                     $descs.eq(i).slideDown(500);

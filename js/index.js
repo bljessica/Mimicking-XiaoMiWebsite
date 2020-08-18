@@ -9,12 +9,13 @@ require.config({
         'toUp': 'index/toUp',
         'shoppingCart': 'index/shoppingCart',
         'nav': 'index/nav',
+        'afterLogin': 'index/afterLogin'
     }
 });
 
 require(['jquery'], function($){
-    require(['shangouShift', 'slider', 'classifyShift', 'playBtnHover', 'toUp', 'shoppingCart', 'nav'], 
-        function(shangouShift, slider, classifyShift, playBtnHover, toUp, shoppingCart, nav){
+    require(['shangouShift', 'slider', 'classifyShift', 'playBtnHover', 'toUp', 'shoppingCart', 'nav', 'afterLogin'], 
+        function(shangouShift, slider, classifyShift, playBtnHover, toUp, shoppingCart, nav, afterLogin){
 
         shangouShift.autoShift();
         slider.autoShift();
@@ -25,5 +26,6 @@ require(['jquery'], function($){
         toUp.toUp();
         shoppingCart.showDesc();
         nav.navDescShow();
+        afterLogin.greeting();
     });
 })
