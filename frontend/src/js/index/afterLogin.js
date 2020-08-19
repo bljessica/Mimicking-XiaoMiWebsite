@@ -11,10 +11,8 @@ define(() => {
                 if(res.account){
                     let $loginBtn = $('#header .user-action .login');
                     let $registerBtn = $('#header .user-action .register');
-                    if(res){
-                        $loginBtn.html('你好！');
-                        $registerBtn.html('');
-                    }
+                    $loginBtn.html(res.account.substring(0, 3) + '...,你好！');
+                    $registerBtn.css('display', 'none')
                 }
                 
             },

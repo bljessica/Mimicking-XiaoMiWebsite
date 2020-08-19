@@ -1,0 +1,1 @@
+"use strict";define(function(){return{toUp:function(){var o=$("#aside .toUp");$(window).scroll(function(){200<$(window).scrollTop()?o.show():o.hide()}),o.click(function(){$(window).scrollTop();$("body, html").animate({scrollTop:0},500)})}}});
