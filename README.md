@@ -8,3 +8,10 @@
 + 使用原生node.js结合mongodb数据库实现登陆注册功能，之后用express框架重写
 + 使用md5对密码进行加密再进行存储
 + 使用mongodb数据库存储session，记录登录状态
+## 运行：
+前端代码：index.html  
+后端代码： 
+```
+cd backend
+node app.js
+```
