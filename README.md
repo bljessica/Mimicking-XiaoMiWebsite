@@ -12,7 +12,10 @@
 + 前端代码：入口文件为index.html
 + 后端代码： 
 ```
+#切换到项目路径
 cd backend
+# 安装依赖
 npm install
+# 运行
 node app.js
 ```
