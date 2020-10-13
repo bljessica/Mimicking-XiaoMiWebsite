@@ -2,7 +2,7 @@
 ## 项目描述
 仿制小米官网的主页以及登录、注册界面，实现登录、注册功能。
 ## 技术要点：
-+ 基于div+css布局
++ 基于div+css布局，使用JQuery框架
 + 前端采用require.js进行模块化编程，在模块中使用jquery框架
 + 使用gulp构建前端项目，对js,css代码和图片进行压缩
 + 使用原生node.js结合mongodb数据库实现登陆注册功能，之后用express框架重写
