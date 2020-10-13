@@ -14,8 +14,10 @@
 ```
 #切换到项目路径
 cd backend
+
 # 安装依赖
 npm install
+
 # 运行
 node app.js
 ```
